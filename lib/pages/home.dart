@@ -174,3 +174,38 @@ class _HomeScreenInfo extends State<HomeScreen> {
   }
 
 }
+/*  // ignore: missing_return
+  Widget _showTexto(){
+    if(double.parse(resultado) < 29.0)
+    return new Container(
+      margin: EdgeInsets.only(left: 0, top: 30, bottom: 0),
+      child: Text("Composto de amoras ajuda a perda de peso", style:TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.blueGrey)),
+    );
+  }
+
+  // ignore: missing_return
+  Widget _showNeedHelpButton() {
+    if(double.parse(resultado) < 29.0)
+    return new Padding(
+        padding: EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 0.0),
+          child: Material(  //Wrap with Material
+          shape: RoundedRectangleBorder(borderRadius:BorderRadius.circular(22.0) ),
+          elevation: 18.0,
+          color: Color(0xFF801E48),
+          clipBehavior: Clip.antiAlias, // Add This
+          child: MaterialButton(
+          minWidth: 200.0,
+          height: 35,
+          color: Color(0xFF801E48),
+            child: new Text('Saiba Mais',
+            style: new TextStyle(fontSize: 16.0, color: Colors.white)),
+        onPressed: () {
+
+        },
+      ),
+    ));
+  }
+
+                       _showTexto(),
+                     _showNeedHelpButton(),
+* */

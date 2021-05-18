@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class ResultadosPage extends StatelessWidget{
   ResultadosPage({this.resultado,this.classificacao}); /* Esse é o creator que vai receber os dados */
   final String resultado;
@@ -81,7 +82,6 @@ class ResultadosPage extends StatelessWidget{
                                      Flexible(
                                        child: Text(textoorganizado, style:TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: Colors.teal)),
                                      ),
-
                                    ],
                                  ),
                                ],
@@ -100,30 +100,30 @@ class ResultadosPage extends StatelessWidget{
   organizarTextos(){
     double result = double.parse(resultado);
     textoorganizado = "";
-    if (result < 18.5)
+    if (result < 18.6)
       textoorganizado += "Procure um médico. "
           "Algumas pessoas têm um baixo peso "
           "por características do seu organismo "
           "e tudo bem. Outras podem estar enfrentando "
           "problemas, como a desnutrição. "
           "É preciso saber qual é o caso.";
-    else if (result < 24.9)
+    else if (result < 25.0)
       textoorganizado += "Que bom que você está com o"
           " peso normal! E o melhor jeito de continuar "
           "assim é mantendo um estilo de vida ativo e uma"
           " alimentação equilibrada.";
-    else if (result < 29.9)
+    else if (result < 30.0)
       textoorganizado += "Ele é, na verdade, uma pré-obesidade e "
           "muitas pessoas nessa faixa já apresentam doenças associadas, "
           "como diabetes e hipertensão. "
           "Importante rever hábitos e buscar ajuda antes de, por uma série "
           "de fatores, entrar na faixa da obesidade pra valer.";
-    else if (result < 34.9)
+    else if (result < 35.0)
       textoorganizado += "Sinal de alerta! Chegou na hora de se cuidar, "
           "mesmo que seus exames sejam normais. Vamos dar início a mudanças hoje! "
           "Cuide de sua alimentação. Você precisa iniciar um acompanhamento com "
           "nutricionista e/ou endocrinologista.";
-    else if (result < 39.9)
+    else if (result < 40.0)
       textoorganizado += "Mesmo que seus exames aparentem estar normais, é hora de se cuidar, "
           "iniciando mudanças no estilo de vida com o acompanhamento próximo de profissionais de saúde.";
     else
@@ -134,18 +134,18 @@ class ResultadosPage extends StatelessWidget{
   organizarImagens(){
     double result = double.parse(resultado);
     imagemorganizada = "";
-    if (result < 18.5)
-      imagemorganizada += "../assets/imc_06.png";
-    else if (result < 24.9)
-      imagemorganizada += "../assets/imc_05.png";
-    else if (result < 29.9)
-      imagemorganizada += "../assets/imc_04.png";
-    else if (result < 34.9)
-      imagemorganizada += "../assets/imc_03.png";
-    else if (result < 39.9)
-      imagemorganizada += "../assets/imc_02.png";
+    if (result < 18.6)
+      imagemorganizada = "../assets/imc_06.png";
+    else if (result < 25.0)
+      imagemorganizada = "../assets/imc_05.png";
+    else if (result < 30.0)
+      imagemorganizada = "../assets/imc_04.png";
+    else if (result < 35.0)
+      imagemorganizada = "../assets/imc_03.png";
+    else if (result < 40.0)
+      imagemorganizada = "../assets/imc_02.png";
     else
-      imagemorganizada += "../assets/imc_01.png";
+      imagemorganizada = "../assets/imc_01.png";
   }
 
 
