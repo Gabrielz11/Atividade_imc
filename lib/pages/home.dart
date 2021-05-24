@@ -126,9 +126,9 @@ class _HomeScreenInfo extends State<HomeScreen> {
                                 _peso.text.isEmpty
                                     ? _validate = true
                                     : _validate = false;
-                                calculateImc(double.parse(_altura.text),double.parse(_peso.text));
                               });
                               if (_validate != true) {
+                                calculateImc(double.parse(_altura.text),double.parse(_peso.text));
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
